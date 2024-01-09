@@ -5,13 +5,13 @@ function solution(numbers) {
    for (let i = 0; i < numbers.length; i++) {
       for (let j = 0; j < numbers.length; j++) {
          if (i !== j) {
-            let sum = numbers[i] + numbers[j];
-            newArray.push(sum);
+            newArray.push(numbers[i] + numbers[j]);
          }
       }
    }
-   newArray = new Set(newArray);
-   answer = [...newArray];
+   // newArray = new Set(newArray);
+   // answer = [...newArray];
+   answer = [...new Set(newArray)];
    answer.sort((a, b) => a - b);
    return answer;
 }
