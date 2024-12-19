@@ -3,8 +3,10 @@ function solution(s) {
 
    const splitS = s.split(' ');
 
-    
-    answer =Math.min(...splitS) + ' '+  Math.max(...splitS);
+   const maxNumber = Math.max(...splitS);
+   const minNumber = Math.min(...splitS);
+
+   answer = answer.concat(minNumber, ' ', maxNumber);
 
    return answer;
 }
